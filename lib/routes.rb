@@ -12,6 +12,8 @@ Routes = Rack::Builder.new do
     # mount all individual Sinatra apps here
   end
 
+  use Endpoints::Tickets
+
   # root app; but will also handle some defaults like 404
   run Endpoints::Root
 end
